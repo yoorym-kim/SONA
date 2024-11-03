@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile.ProfileFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/profile_guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.31" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/button_dark_color"
+        app:layout_constraintBottom_toTopOf="@id/profile_guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/profile_guideline3"
+        app:layout_constraintTop_toTopOf="@id/profile_guideline1" />
+
+
+    <TextView
+        android:id="@+id/username_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sandolsentl"
+        android:text="NAME"
+        android:textColor="@color/button_light_intext_color"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/cng_birth_tx"
+        app:layout_constraintEnd_toStartOf="@+id/profile_guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/profile_guideline1" />
+
+
+    <TextView
+        android:id="@+id/cng_birth_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sandolsentl"
+        android:text="BIRTH"
+        android:textColor="@color/button_light_intext_color"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/cng_diaryname_tx"
+        app:layout_constraintEnd_toStartOf="@+id/profile_guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username_tx" />
+
+    <TextView
+        android:id="@+id/cng_diaryname_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sandolsentl"
+        android:gravity="center"
+        android:text="DIRARY\nNAME"
+        android:textColor="@color/button_light_intext_color"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toStartOf="@+id/profile_guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cng_birth_tx" />
+
+    <ImageView
+        android:id="@+id/cng_profile_img"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@drawable/diary"
+        app:layout_constraintBottom_toTopOf="@+id/profile_guideline1"
+        app:layout_constraintEnd_toStartOf="@+id/cng_profile_bt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/cng_profile_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="변경하기"
+        app:layout_constraintBottom_toBottomOf="@+id/cng_profile_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cng_profile_img"
+        app:layout_constraintTop_toTopOf="@+id/cng_profile_img" />
+
+    <EditText
+        android:id="@+id/cng_username_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pencil"
+        android:hint="내용을 입력하세요."
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/username_tx"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.245"
+        app:layout_constraintStart_toStartOf="@+id/profile_guideline3"
+        app:layout_constraintTop_toTopOf="@+id/username_tx"
+        app:layout_constraintVertical_bias="0.523" />
+
+    <EditText
+        android:id="@+id/cng_diaryname_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pencil"
+        android:hint="내용을 입력하세요."
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/cng_diaryname_tx"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.245"
+        app:layout_constraintStart_toStartOf="@+id/profile_guideline3"
+        app:layout_constraintTop_toTopOf="@+id/cng_diaryname_tx" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/profile_guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/button_dark_color"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/profile_guideline1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="invisible" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/profile_guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/button_dark_color"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/profile_guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/profilesave_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_rect_button_dark"
+        android:fontFamily="@font/sandolsentl"
+        android:text="저장하기"
+        android:textColor="@color/button_dark_intext_color"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/profile_guideline2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/cng_birth_tx"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout5"
+        app:layout_constraintStart_toStartOf="@+id/profile_guideline3"
+        app:layout_constraintTop_toTopOf="@+id/cng_birth_tx">
+
+        <EditText
+            android:id="@+id/cng_birth_year_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pencil"
+            android:hint="2022"
+            android:textSize="24sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/dafs_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pencil"
+            android:text="년"
+            android:textColor="@color/button_light_intext_color"
+            android:textSize="24sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout6"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout4"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout4">
+
+        <EditText
+            android:id="@+id/cng_birth_month_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pencil"
+            android:hint="12"
+            android:textSize="24sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/cng_username_tx3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pencil"
+            android:text="월"
+            android:textColor="@color/button_light_intext_color"
+            android:textSize="24sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout5"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout5">
+
+        <EditText
+            android:id="@+id/cng_birth_day_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pencil"
+            android:hint="31"
+            android:textSize="24sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/cng_day_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pencil"
+            android:text="일"
+            android:textColor="@color/button_light_intext_color"
+            android:textSize="24sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

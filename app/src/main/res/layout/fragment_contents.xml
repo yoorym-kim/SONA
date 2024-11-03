@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".contents.ContentsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:fontFamily="@font/sandolsentl"
+                android:gravity="center"
+                android:text="선택된 날짜의 일기 감정 분석을 토대로 보여드리는\n\n컨텐츠 추천 화면입니다.\n\n힐링 컨텐츠로 기분 좋은 하루를 마무리해보세요 :)"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="____________________________________________________\n"
+                android:textColor="#80595959"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="26dp"
+                android:fontFamily="@font/sandolsentm"
+                android:gravity="center"
+                android:text="오늘의 추천 명언"
+                android:textAlignment="center"
+                android:textColor="@color/button_light_intext_color"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/phraseWords"
+                android:layout_width="296dp"
+                android:layout_height="85dp"
+                android:fontFamily="@font/hope"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/personWords"
+                android:layout_width="match_parent"
+                android:layout_height="31dp"
+                android:fontFamily="@font/hope"
+                android:gravity="center"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="____________________________________________________\n"
+                android:textColor="#B38A8A8A"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sandolsentm"
+                    android:text="음악 추천"
+                    android:textAlignment="center"
+                    android:textColor="@color/button_light_intext_color"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ShowButton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.533" />
+
+                <Button
+                    android:id="@+id/ShowButton"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/common_rect_button_dark"
+                    android:fontFamily="@font/sandolsentl"
+                    android:gravity="center"
+                    android:text="Show"
+                    android:textColor="@color/button_dark_intext_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView17"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:numStars="5"
+                android:rating="2.5"
+                android:stepSize="0.5" />
+
+            <WebView
+                android:id="@+id/ContentsWebView"
+                android:layout_width="388dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </WebView>
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#B3595959"
+                android:text="____________________________________________________"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:fontFamily="@font/sandolsentl"
+                android:gravity="center"
+                android:text="힘든 하루를 보내고 계신가요?\n\n때로는 @@님의 이야기를 털어놓고 이야기하는 것이\n\n도움이 될 때도 있답니다"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center|top"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/CenterButton"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/common_rect_button_dark"
+                    android:fontFamily="@font/sandolsentl"
+                    android:gravity="center"
+                    android:text="심리상담센터 연결하기"
+                    android:textColor="@color/button_dark_intext_color"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

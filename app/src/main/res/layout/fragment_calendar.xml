@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:contextClickable="true"
+    android:longClickable="true"
+    tools:context=".calendar.CalendarFragment">
+
+    <com.applikeysolutions.cosmocalendar.view.CalendarView
+        android:id="@+id/cosmo_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contextClickable="false"
+        android:fadeScrollbars="false"
+        android:isScrollContainer="false"
+        android:nestedScrollingEnabled="false"
+        android:overScrollMode="never"
+        android:scrollIndicators="none"
+        app:connectedDayIconPosition="top"
+        app:currentDayTextColor="@color/default_connected_day_selected_text_color"
+        app:layout_constraintBottom_toTopOf="@+id/profile_guideline1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/profile_guideline2"
+        app:orientation="horizontal"
+        app:selectedDayBackgroundColor="#EDB9A9FF"
+        app:selectedDayBackgroundEndColor="#EDB9A9FF"
+        app:selectedDayBackgroundStartColor="#EDB9A9FF"
+        app:selectionType="single"
+        app:weekendDayTextColor="@color/red" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/profile_guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.72" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/profile_guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.06" />
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/button_dark_color"
+        android:visibility="invisible"
+
+        app:layout_constraintBottom_toTopOf="@+id/profile_guideline1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/button_dark_color"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/profile_guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Button
+        android:id="@+id/button_contents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_rect_button_dark"
+        android:fontFamily="@font/sandolsentl"
+        android:text="추천 콘텐츠"
+        android:textColor="@color/button_dark_intext_color"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/button_write"
+        app:layout_constraintEnd_toStartOf="@+id/button_check"
+        app:layout_constraintStart_toEndOf="@+id/button_write"
+        app:layout_constraintTop_toTopOf="@+id/button_write" />
+
+    <Button
+        android:id="@+id/button_write"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_rect_button_dark"
+        android:fontFamily="@font/sandolsentl"
+        android:outlineProvider="none"
+        android:text="일기 작성"
+        android:textColor="@color/button_dark_intext_color"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_contents"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/profile_guideline1"
+        app:layout_constraintVertical_bias="0.502" />
+
+    <Button
+        android:id="@+id/button_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_rect_button_dark"
+        android:fontFamily="@font/sandolsentl"
+        android:text="일기 조회"
+        android:textColor="@color/button_dark_intext_color"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/button_contents"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_contents"
+        app:layout_constraintTop_toTopOf="@+id/button_contents"
+        app:layout_constraintVertical_bias="0.552" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
